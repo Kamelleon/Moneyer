@@ -1,0 +1,22 @@
+#to-return{
+    width:12.5vw;
+    text-align: center;
+    float:left;
+    font-size:3vh;
+    color:gray;
+}
+hr{
+    margin-right: 40px;
+}
+hr:last-child {
+  display:none;
+}
+#to-get-back{
+    width:12.5vw;
+    font-size:3vh;
+    font-weight: bold;
+    color:white;
+    float:left;
+    text-align: center;
+
+}

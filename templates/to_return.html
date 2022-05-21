@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/to_return.css' %}">
+    <div id="add"><a href="">+</a></div>
+    <div class="money-table glass">
+        <ul>
+            {% for instance in object_list %}
+                <li>{{ instance.title }} - {{ instance.amount }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

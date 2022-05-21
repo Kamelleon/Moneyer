@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>{{ object.title}}</h1>
+<p>{{ object.amount }}</p>
+<p>{{ object.short_description }}</p>
+<form action="{% url 'to-get-back-delete' object.id %}" method="POST">
+  {% csrf_token %}
+  <input class="btn btn-default btn-danger" type="submit" value="Delete"/>
+</form>
+</body>
+</html>

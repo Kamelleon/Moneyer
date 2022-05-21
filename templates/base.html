@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Moneyer</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<br>
+<br>
+    <div class="titlebar glass">
+        <h1>Moneyer</h1>
+    </div>
+    <br>
+    <div class="navbar-glass">
+        <a href="/to_get_back/"><span id="to-get-back">To get back</span></a>
+        <a href="/to_return/"><span id="to-return">To return</span></a>
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
