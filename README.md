@@ -4,7 +4,6 @@ Django app that reminds you about the money you should get back and the money yo
 # In-app possibilities
 - Creating objects
 - Viewing detailed view of every object
-- Viewing list view of objects
 - Deleting objects
 - Modifying objects
 
