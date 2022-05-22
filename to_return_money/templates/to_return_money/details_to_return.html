@@ -12,11 +12,10 @@
     </div>
     <br>
     <div class="actions glass">
-            <form action="{% url 'to-get-back-update' object.id %}" method="GET">
-                {% csrf_token %}
+            <form action="{% url 'to_return_money:to-return-update' object.id %}" method="GET">
                 <input id="update-button" type="submit" value="Update"/>
             </form>
-            <form action="{% url 'to-get-back-delete' object.id %}" method="POST">
+            <form action="{% url 'to_return_money:to-return-delete' object.id %}" method="POST">
                 {% csrf_token %}
                 <input id="delete-button" type="submit" value="Delete"/>
             </form>

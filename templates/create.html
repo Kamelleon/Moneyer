@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-    <link rel="stylesheet" href="{% static 'css/update_to_get_back.css' %}">
+    <link rel="stylesheet" href="{% static 'css/create.css' %}">
     <br>
         <form method="post">{% csrf_token %}
             <div class="container glass">
@@ -10,11 +10,11 @@
                 <p class="label">Title</p>
                 <p>{{ form.title }}</p>
                     <p class="label">Amount</p>
-                <p>{{ form.amount }}</p>
+                <p>{{ form.amount }} zł</p>
                     <p class="label">Description</p>
                 <p>{{ form.short_description }}</p>
                     <div id="actions">
-                        <input id="update-item" type="submit" value="Update">
+                        <input id="add-item" type="submit" value="Add">
                     </div>
                 </div>{% if form.errors %}
     {% for field in form %}

@@ -4,11 +4,11 @@
     <link rel="stylesheet" href="{% static 'css/to_return.css' %}">
     <br>
     {% include "navbar.html" %}
-    <div id="add"><a href="{% url 'to-return-create' %}">+</a></div>
+    <div id="add"><a href="{% url 'to_return_money:to-return-create' %}">+</a></div>
     <div class="money-table glass">
         <ul>
             {% for instance in object_list %}
-                <li><a href="{% url 'to-return-details' instance.id %}">{{ instance.title }} - {{ instance.amount }}zł<br><span id="short-description">{{ instance.short_description }}</span></a></li>
+                <li><a href="{% url 'to_return_money:to-return-details' instance.id %}">{{ instance.title }} - {{ instance.amount }}zł<br><span id="short-description">{{ instance.short_description }}</span></a></li>
                 <hr>
             {% endfor %}
         </ul>

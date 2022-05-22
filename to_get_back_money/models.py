@@ -13,4 +13,4 @@ class GetBackMoney(models.Model):
     short_description = models.CharField(max_length=100)
 
     def get_absolute_url(self):
-        return reverse("to-get-back-details",kwargs={"id":self.id})
+        return reverse("to_get_back_money:to-get-back-details",kwargs={"id":self.id})
