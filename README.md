@@ -3,4 +3,5 @@ Django app that reminds you about the money you should get back and the money yo
 
 # Screenshots
 - Main screen
-- ![alt text](https://github.com/Kamelleon/Moneyer/blob/main/app_screenshots/Moneyer.png)
+
+![alt text](https://github.com/Kamelleon/Moneyer/blob/main/app_screenshots/Moneyer.png)
