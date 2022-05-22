@@ -13,7 +13,7 @@ class GetBackListView(ListView):
     template_name = "to_get_back.html"
 
 class GetBackDetailView(DetailView):
-    template_name = "details.html"
+    template_name = "details_to_get_back.html"
     queryset = GetBackMoney.objects.all()
 
     def get_object(self):
@@ -21,7 +21,7 @@ class GetBackDetailView(DetailView):
         return get_object_or_404(GetBackMoney, id=id_)
 
 class GetBackDeleteView(DeleteView):
-    template_name = "details.html"
+    template_name = "details_to_get_back.html"
     queryset = GetBackMoney.objects.all()
     success_url = "/to_get_back/"
 

@@ -2,11 +2,14 @@
 {% load static %}
 {% block content %}
     <link rel="stylesheet" href="{% static 'css/to_return.css' %}">
-    <div id="add"><a href="">+</a></div>
+    <br>
+    {% include "navbar.html" %}
+    <div id="add"><a href="{% url 'to-return-create' %}">+</a></div>
     <div class="money-table glass">
         <ul>
             {% for instance in object_list %}
-                <li>{{ instance.title }} - {{ instance.amount }}</li>
+                <li><a href="{% url 'to-return-details' instance.id %}">{{ instance.title }} - {{ instance.amount }}zł<br><span id="short-description">{{ instance.short_description }}</span></a></li>
+                <hr>
             {% endfor %}
         </ul>
     </div>

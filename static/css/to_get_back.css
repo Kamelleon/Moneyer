@@ -4,6 +4,7 @@
     float:left;
     font-size:3vh;
     color:gray;
+
 }
 hr{
     margin-right: 40px;
@@ -14,8 +15,8 @@ hr:last-child {
 #to-get-back{
     width:12.5vw;
     font-size:3vh;
-    font-weight: bold;
     color:white;
+    font-weight: bold;
     float:left;
     text-align: center;
 

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/details.css' %}">
+    <br>
+    <div class="header glass">
+        <p id="title">{{ object.title }}</p>
+        <hr>
+        <p id="amount">{{ object.amount }}</p>
+        <hr>
+        <p id="description">{{ object.short_description }}</p>
+    </div>
+    <br>
+    <div class="actions glass">
+            <form action="{% url 'to-return-update' object.id %}" method="GET">
+                {% csrf_token %}
+                <input id="update-button" type="submit" value="Update"/>
+            </form>
+            <form action="{% url 'to-return-delete' object.id %}" method="POST">
+                {% csrf_token %}
+                <input id="delete-button" type="submit" value="Delete"/>
+            </form>
+    </div>
+    <br>
+
+{% endblock %}
