@@ -12,10 +12,10 @@ body{
 h1{
     text-align: center;
     /*font-family: 'Merienda One', cursive;*/
-    font-family: 'Tangerine', cursive;
-    font-size:7vh;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size:6.5vh;
     color:white;
-    letter-spacing: 0.12vw;
+    letter-spacing: 0.2vw;
     margin-top: 1.5vh;
     margin-bottom: 1.5vh;
 }
