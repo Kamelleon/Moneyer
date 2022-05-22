@@ -1,11 +1,11 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import GetBackMoney
 from .forms import GetBackModelForm
 from django.views.generic import (
     ListView,
     CreateView,
     DetailView,
-DeleteView
+    DeleteView, UpdateView
 )
 
 class GetBackListView(ListView):
@@ -30,7 +30,12 @@ class GetBackDeleteView(DeleteView):
         return get_object_or_404(GetBackMoney, id=id_)
 
 class GetBackCreateView(CreateView):
-    template_name = 'create_return.html'
+    template_name = 'create_to_get_back.html'
     form_class = GetBackModelForm
     success_url = '/to_get_back/'
     queryset = GetBackMoney.objects.all()
+
+class GetBackUpdateView(UpdateView):
+    template_name = "update_to_get_back.html"
+    form_class = GetBackModelForm
+    model = GetBackMoney

@@ -1,17 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/details.css' %}">
+    <br>
+    <div class="header glass">
+        <p id="title">{{ object.title }}</p>
+        <hr>
+        <p id="amount">{{ object.amount }}</p>
+        <hr>
+        <p id="description">{{ object.short_description }}</p>
+    </div>
+    <br>
+    <div class="actions glass">
+            <form action="{% url 'to-get-back-update' object.id %}" method="GET">
+                {% csrf_token %}
+                <input id="update-button" type="submit" value="Update"/>
+            </form>
+            <form action="{% url 'to-get-back-delete' object.id %}" method="POST">
+                {% csrf_token %}
+                <input id="delete-button" type="submit" value="Delete"/>
+            </form>
+    </div>
+    <br>
 
-<h1>{{ object.title}}</h1>
-<p>{{ object.amount }}</p>
-<p>{{ object.short_description }}</p>
-<form action="{% url 'to-get-back-delete' object.id %}" method="POST">
-  {% csrf_token %}
-  <input class="btn btn-default btn-danger" type="submit" value="Delete"/>
-</form>
-</body>
-</html>
+{% endblock %}

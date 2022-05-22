@@ -1,0 +1,72 @@
+.container{
+    overflow-wrap: break-word;
+    width:25vw;
+    height:50vh;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-align: left;
+
+}
+p{
+    margin-left:2vw;
+}
+input {
+  all: unset;
+}
+.label{
+    font-size:3vh;
+    margin-bottom:0.2vh;
+}
+#actions{
+    width:100%;
+    text-align: left;
+}
+#update-item{
+    cursor:pointer;
+    margin-left: 10vw;
+    padding:1.5vh;
+    border-radius: 2vw;
+    border:0.2vh solid white;
+}
+.form-title{
+    width:20.5vw;
+    font-size: 2vh;
+    padding-bottom:0.5vh;
+    padding-top:0.5vh;
+    outline: none;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 0.2vw;
+    border:0.1vw solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+.form-amount{
+    width:6vw;
+    font-size: 2vh;
+    padding-bottom:0.5vh;
+    padding-top:0.5vh;
+    outline: none;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 0.2vw;
+    border:0.1vw solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+.form-description{
+    width:20.5vw;
+    font-size: 2vh;
+    padding-bottom:0.5vh;
+    padding-top:0.5vh;
+    outline: none;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 0.2vw;
+    border:0.1vw solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}

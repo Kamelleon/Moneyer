@@ -2,6 +2,7 @@ body{
     /*background: rgb(79,45,0);*/
     /*background: linear-gradient(312deg, rgba(79,45,0,1) 0%, rgba(147,84,0,1) 50%, rgba(255,149,0,1) 100%);*/
     background: url("/static/img/background.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin:0;
@@ -93,6 +94,8 @@ li{
     font-family: 'Roboto Flex', sans-serif;
     font-size: 2vh;
     font-weight: bold;
+    overflow: clip;
+    text-overflow: ellipsis;
 }
 .navbar-glass{
     width:25vw;

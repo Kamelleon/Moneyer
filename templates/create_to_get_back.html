@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/create_to_get_back.css' %}">
+    <br>
+        <form method="post">{% csrf_token %}
+            <div class="container glass">
+                <div class="">
+                    <br>
+                <p class="label">Title</p>
+                <p>{{ form.title }}</p>
+                    <p class="label">Amount</p>
+                <p>{{ form.amount }}</p>
+                    <p class="label">Description</p>
+                <p>{{ form.short_description }}</p>
+                    <div id="actions">
+                        <input id="add-item" type="submit" value="Add">
+                    </div>
+                </div>{% if form.errors %}
+    {% for field in form %}
+        {% for error in field.errors %}
+            <p> {{ error }} </p>
+        {% endfor %}
+    {% endfor %}
+{% endif %}
+            </div>
+        </form>
+{% endblock %}

@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from to_get_back_money.views import GetBackListView, GetBackCreateView, GetBackDetailView, GetBackDeleteView
+from to_get_back_money.views import GetBackListView, GetBackCreateView, GetBackDetailView, GetBackDeleteView, GetBackUpdateView
 
 urlpatterns = [
     path('', GetBackListView.as_view()),
@@ -24,6 +24,7 @@ urlpatterns = [
     path('to_get_back/create', GetBackCreateView.as_view(), name='to-get-back-create'),
     path('to_get_back/<int:id>', GetBackDetailView.as_view(), name='to-get-back-details'),
     path('delete/<int:id>', GetBackDeleteView.as_view(), name='to-get-back-delete'),
+    path('update/<int:pk>', GetBackUpdateView.as_view(), name='to-get-back-update'),
     # path('to_return/', outstanding_money_view),
     path('admin/', admin.site.urls),
 ]
